@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>عند خالد سبع - خضر وفواكه</title>
+<style>
+body{font-family:Arial;direction:rtl;background:#f7fff7;margin:0}
+header{background:green;color:white;padding:15px;text-align:center}
+nav button{margin:5px;padding:5px 10px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;padding:15px}
+.card{border:2px solid red;padding:10px;text-align:center;background:white}
+.card img{width:100%;height:120px;object-fit:cover}
+button{background:red;color:white;border:none;padding:5px;cursor:pointer}
+#cart{padding:15px;background:#eaffea}
+footer{background:green;color:white;text-align:center;padding:10px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>محل عند خالد سبع</h1>
+<p>طنجة – سوق درادب | 📞 +212 612-704490 | 📷 amino_._chmali</p>
+<nav>
+<button onclick="setLang('ar')">العربية</button>
+<button onclick="setLang('fr')">Français</button>
+</nav>
+</header>
+
+<section id="about">
+<pre id="text-ar">
+1- مرحباً بكم في محل عند خالد سبع.
+2- نبيع أجود أنواع الخضر والفواكه.
+3- الجودة هي أولويتنا الأولى.
+4- أثمنة مناسبة للجميع.
+5- المحل يوجد بسوق درادب طنجة.
+6- نختار المنتوج بعناية.
+7- البطاطس طازجة يومياً.
+8- الطماطم من أحسن الضيعات.
+9- البصل ذو جودة عالية.
+10- الدنجال طبيعي 100%.
+11- الموز مختار بعناية.
+12- التفاح لذيذ وصحي.
+13- البرتقال غني بالفيتامينات.
+14- الثوم بلدي ممتاز.
+15- التعامل باحترام وأمانة.
+16- رضا الزبون هدفنا.
+17- نرحب بجميع الزبائن.
+18- المحل مفتوح يومياً.
+19- نحب خدمتكم دائماً.
+20- الأسعار واضحة.
+21- مرحباً بكم في أي وقت.
+22- شكراً لثقتكم بنا.
+</pre>
+</section>
+
+<section class="products">
+<div class="card"><img src="https://via.placeholder.com/150"><p>بطاطس – 8Dh</p><button onclick="add(8)">أضف</button></div>
+<div class="card"><img src="https://via.placeholder.com/150"><p>بصل – 7Dh</p><button onclick="add(7)">أضف</button></div>
+<div class="card"><img src="https://via.placeholder.com/150"><p>طماطم – 6Dh</p><button onclick="add(6)">أضف</button></div>
+<div class="card"><img src="https://via.placeholder.com/150"><p>دنجال – 9Dh</p><button onclick="add(9)">أضف</button></div>
+<div class="card"><img src="https://via.placeholder.com/150"><p>موز – 12Dh</p><button onclick="add(12)">أضف</button></div>
+<div class="card"><img src="https://via.placeholder.com/150"><p>تفاح – 17Dh</p><button onclick="add(17)">أضف</button></div>
+<div class="card"><img src="https://via.placeholder.com/150"><p>برتقال – 6Dh</p><button onclick="add(6)">أضف</button></div>
+<div class="card"><img src="https://via.placeholder.com/150"><p>ثوم – 90Dh</p><button onclick="add(90)">أضف</button></div>
+</section>
+
+<section id="cart">
+<h3>🛒 سلة المشتريات</h3>
+<p>المجموع: <span id="total">0</span> درهم</p>
+</section>
+
+<section style="padding:15px">
+<h3>🎥 فيديو من المحل</h3>
+<video controls width="100%">
+<source src="video.mp4" type="video/mp4">
+</video>
+</section>
+
+<footer>
+<p>© 2026 عند خالد سبع – خضر وفواكه</p>
+</footer>
+
+<script>
+let total=0;
+function add(price){total+=price;document.getElementById('total').innerText=total;}
+function setLang(l){
+if(l==='fr'){
+document.getElementById('text-ar').innerText="Bienvenue chez Khaled Sbaa, fruits et légumes de qualité à Tanger.";
+}else{
+location.reload();
+}}
+</script>
+
+</body>
+</html>
